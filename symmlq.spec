@@ -17,11 +17,11 @@ Source1:	http://www.stanford.edu/group/SOL/software/symmlq/f77/symmlq_f77.README
 # Source1-md5:	83b1bfa5653f9a01758e999a1e047c79
 Patch0:		%{name}-automake_support.patch
 URL:		http://www.stanford.edu/group/SOL/software/symmlq.html
-BuildRequires:  autoconf
-BuildRequires:  automake
-BuildRequires:  gcc-g77
-BuildRequires:  libtool >= 2:1.5
+BuildRequires:	autoconf
+BuildRequires:	automake
 %{!?with_acml:%{!?with_atlas:BuildRequires:	blas-devel}}
+BuildRequires:	gcc-g77
+BuildRequires:	libtool >= 2:1.5
 %{?with_acml:ExclusiveArch:	amd64}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
