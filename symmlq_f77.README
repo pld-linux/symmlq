@@ -1,0 +1,18 @@
+symmlq_f77.README
+
+The software for SYMMLQ (f77 version) is provided by SOL, Stanford University
+under the terms of the Common Public License (CPL):
+http://oss.software.ibm.com/developerworks/opensource/license-cpl.html
+
+
+11 Feb 2000: First set of files available for download from SOL.
+
+Please send comments to Michael Saunders, SOL, Stanford University
+                        saunders@stanford.edu  650-723-1875
+-----------------------------------------------------------------------------
+
+The f77 version of SYMMLQ involves the following files:
+
+   symmlq.f
+   symmlqblas.f   (not needed if you have BLAS-1)
+   symmlqtest.f
