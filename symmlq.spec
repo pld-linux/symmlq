@@ -1,7 +1,9 @@
 #
 # Conditional build:
 %bcond_with     acml    # With ACML version of BLAS instead of NETLIB implementation
-%bcond_with	atlas	$ With ATLAS version of BLAS insted of NETLIB implementation (usage mutually exclusive with acml)
+%bcond_with	atlas	# With ATLAS version of BLAS instead of NETLIB implementation
+			# (mutually exclusive with acml)
+#
 Summary:	Iterative linear equations solver
 Summary(pl):	Rozwi±zywanie równañ liniowych metod± iteracyjn±
 Name:		symmlq
@@ -42,6 +44,7 @@ jej dostarczyæ dodatnio okre¶lony preconditioner.
 Summary:	SYMMLQ development files
 Summary(pl):	Pliki programistyczne SYMMLQ
 Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 SYMMLQ development files.
@@ -53,6 +56,7 @@ Pliki programistyczne SYMMLQ.
 Summary:	Static SYMMLQ library
 Summary(pl):	Statyczna biblioteka SYMMLQ
 Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SYMMLQ library.
@@ -61,7 +65,7 @@ Static SYMMLQ library.
 Statyczna biblioteka SYMMLQ.
 
 %prep
-%setup -q -c SYMMLQ -T
+%setup -q -c -T
 %patch0 -p1
 
 cp %{SOURCE0} .
@@ -80,8 +84,6 @@ cp %{SOURCE1} README
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
