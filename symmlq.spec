@@ -79,7 +79,7 @@ cp %{SOURCE1} README
 %{__automake}
 %configure \
 	CFLAGS=-O3 \
-	LDFLAGS=%{?with_acml:-lacml}%{?with_atlas:"-lf77blas -latlas"}%{!?with_acml:%{!?with_atlas:-lblas}}
+	LDFLAGS=%{?with_acml:"-lm -lg2c -lacml"}%{?with_atlas:"-lf77blas -latlas"}%{!?with_acml:%{!?with_atlas:-lblas}}
 %{__make}
 
 %install
