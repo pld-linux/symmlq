@@ -5,7 +5,7 @@
 			# (mutually exclusive with acml)
 #
 Summary:	Iterative linear equations solver
-Summary(pl.UTF-8):   Rozwiązywanie równań liniowych metodą iteracyjną
+Summary(pl.UTF-8):	Rozwiązywanie równań liniowych metodą iteracyjną
 Name:		symmlq
 Version:	19991020
 Release:	1%{?with_acml:ACML}%{?with_atlas:ATLAS}
@@ -42,7 +42,7 @@ jej dostarczyć dodatnio określony preconditioner.
 
 %package devel
 Summary:	SYMMLQ development files
-Summary(pl.UTF-8):   Pliki programistyczne SYMMLQ
+Summary(pl.UTF-8):	Pliki programistyczne SYMMLQ
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -54,7 +54,7 @@ Pliki programistyczne SYMMLQ.
 
 %package static
 Summary:	Static SYMMLQ library
-Summary(pl.UTF-8):   Statyczna biblioteka SYMMLQ
+Summary(pl.UTF-8):	Statyczna biblioteka SYMMLQ
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
