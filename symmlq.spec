@@ -5,7 +5,7 @@
 			# (mutually exclusive with acml)
 #
 Summary:	Iterative linear equations solver
-Summary(pl):	Rozwi±zywanie równañ liniowych metod± iteracyjn±
+Summary(pl.UTF-8):   RozwiÄ…zywanie rÃ³wnaÅ„ liniowych metodÄ… iteracyjnÄ…
 Name:		symmlq
 Version:	19991020
 Release:	1%{?with_acml:ACML}%{?with_atlas:ATLAS}
@@ -33,35 +33,35 @@ scalar s is a shifting parameter -- it may be any number. The method is
 based on Lanczos tridiagonalization. You may provide a preconditioner,
 but it must be positive definite. 
 
-%description -l pl
-Implementacja gradientowej metody rozwi±zywania rzadkich uk³adów równañ
-liniowych, postaci Ax = b albo (A - sI)x = b. Macierz A - sI musi byæ
-symetryczna i nieosobliwa, ale nie musi byæ okre¶lona. Skalar s mo¿e byæ
-dowoln± liczb±. Metoda jest oparta na trójdiagonalizacji Lanczosa. Mo¿na
-jej dostarczyæ dodatnio okre¶lony preconditioner.
+%description -l pl.UTF-8
+Implementacja gradientowej metody rozwiÄ…zywania rzadkich ukÅ‚adÃ³w rÃ³wnaÅ„
+liniowych, postaci Ax = b albo (A - sI)x = b. Macierz A - sI musi byÄ‡
+symetryczna i nieosobliwa, ale nie musi byÄ‡ okreÅ›lona. Skalar s moÅ¼e byÄ‡
+dowolnÄ… liczbÄ…. Metoda jest oparta na trÃ³jdiagonalizacji Lanczosa. MoÅ¼na
+jej dostarczyÄ‡ dodatnio okreÅ›lony preconditioner.
 
 %package devel
 Summary:	SYMMLQ development files
-Summary(pl):	Pliki programistyczne SYMMLQ
+Summary(pl.UTF-8):   Pliki programistyczne SYMMLQ
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 SYMMLQ development files.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki programistyczne SYMMLQ.
 
 %package static
 Summary:	Static SYMMLQ library
-Summary(pl):	Statyczna biblioteka SYMMLQ
+Summary(pl.UTF-8):   Statyczna biblioteka SYMMLQ
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SYMMLQ library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka SYMMLQ.
 
 %prep
