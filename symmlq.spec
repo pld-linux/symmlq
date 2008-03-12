@@ -8,7 +8,7 @@ Summary:	Iterative linear equations solver
 Summary(pl.UTF-8):	Rozwiązywanie równań liniowych metodą iteracyjną
 Name:		symmlq
 Version:	19991020
-Release:	1%{?with_acml:ACML}%{?with_atlas:ATLAS}
+Release:	2%{?with_acml:ACML}%{?with_atlas:ATLAS}
 License:	CPL
 Group:		Libraries
 Source0:	http://www.stanford.edu/group/SOL/software/symmlq/f77/symmlq.f
@@ -22,7 +22,7 @@ BuildRequires:	automake
 %{!?with_acml:%{!?with_atlas:BuildRequires:	blas-devel}}
 BuildRequires:	gcc-g77
 BuildRequires:	libtool >= 2:1.5
-%{?with_acml:ExclusiveArch:	amd64}
+%{?with_acml:ExclusiveArch:	%{x8664}}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -98,6 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_libdir}/libsymmlq.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsymmlq.so.1
 
 %files devel
 %defattr(644,root,root,755)
