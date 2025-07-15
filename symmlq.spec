@@ -66,7 +66,7 @@ Statyczna biblioteka SYMMLQ.
 
 %prep
 %setup -q -c -T
-%patch0 -p1
+%patch -P0 -p1
 
 cp %{SOURCE0} .
 cp %{SOURCE1} README
